@@ -21,11 +21,17 @@ const NAV_ITEMS = [
 ];
 
 const SKILLS_TECH = [
-  { name: "HTML / CSS", level: 85 },
-  { name: "React.js", level: 80 },
-  { name: "JavaScript", level: 75 },
-  { name: "React Native & Expo", level: 75 },
-  { name: "Basic MySQL", level: 65 },
+  { name: "Figma", category: "Design" },
+  { name: "Vercel", category: "Tool" },
+  { name: "Laravel", category: "Backend" },
+  { name: "HTML & CSS", category: "Frontend" },
+  { name: "JavaScript", category: "Frontend" },
+  { name: "Git & Github", category: "Tool" },
+  { name: "VS Code", category: "Tool" },
+  { name: "React", category: "Frontend" },
+  { name: "Tailwind CSS", category: "Frontend" },
+  { name: "Node.js", category: "Backend" },
+  { name: "Vite", category: "Tool" },
 ];
 
 const SKILLS_SOFT = ["Flexibility", "Adaptability", "Willingness to Learn", "Communication Skills", "Creativity"];
@@ -53,7 +59,7 @@ const PROJECTS = [
     status: "COMPLETED",
   },
   {
-    name: "ICT-Inventory management system NAVAL",
+    name: "NAVAL ICT-Inventory management system",
     tag: "",
     desc: "A Laravel-based web inventory system for managing ICT assets, tracking records, and monitoring inventory status efficiently. It includes responsive interfaces and streamlined CRUD operations for daily inventory management.",
     stack: ["Laravel", "React-Native"],
@@ -71,7 +77,7 @@ const CERTIFICATIONS = [
 ];
 
 const AWARDS = [
-  { title: "Best Mobile App", issuer: "College Innovation Fair", date: "2026", id: "AWARD-BMA-2026-001", image: ricesureAward },
+  { title: "Certificate of Recognition", issuer: "College Innovation Fair", date: "2026", id: "AWARD-BMA-2026-001", image: ricesureAward },
   { title: "Certificate of Recognition", issuer: "Holy Cross of Davao College", date: "2026", id: "AWARD-COR-2026-002", image: certOfRecog },
 ];
 
@@ -446,7 +452,7 @@ function PageHome({ setPage }) {
               <div className="text-white text-2xl md:text-4xl font-bold leading-none -mt-6">VAN R. ARROYO</div>
             </h1>
             <div className="mt-0.5 text-green-600 text-base tracking-widest font-medium">
-              <TypewriterText text="> BSIT Student · Developer · Programmer" speed={65} startDelay={900} keepCursor />
+              <TypewriterText text="> · BSIT Student · <" speed={65} startDelay={900} keepCursor />
             </div>
             <p className="mt-1 text-green-300/80 text-base leading-relaxed max-w-2xl">
               Hi ! I’m a BSIT student from Davao City building ideas into real projects and constantly learning along the way.
@@ -653,15 +659,21 @@ function PageSkills({ setPage }) {
   return (
     <PageSection subtitle="SKILLS.dat" className="pt-36 pb-32 !pt-18">
       <div className="grid gap-12 md:grid-cols-2 !pt-18">
-        <TerminalBox title="technical_skills.log" className="pb-6">
+        <TerminalBox title="what_i_work_with.log" className="pb-6 md:col-span-2">
   <p className="text-green-600 text-sm md:text-base mb-6">
     <TypewriterText text="$ ls -la ./tech_stack" speed={65} />
   </p>
 
-  <div className="flex flex-col gap-8">
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
     {SKILLS_TECH.map((s) => (
-      <div key={s.name}>
-        <SkillBar {...s} animate={animate} />
+      <div key={s.name} className="flex flex-col items-center gap-3 group cursor-pointer">
+        <div className="w-20 h-20 rounded-lg bg-green-950/30 border border-green-700/40 flex items-center justify-center group-hover:border-green-500 group-hover:bg-green-950/50 transition-all duration-200">
+          <span className="text-3xl">{s.name === "Figma" ? "🎨" : s.name === "Vercel" ? "▲" : s.name === "Laravel" ? "🔴" : s.name === "HTML & CSS" ? "🌐" : s.name === "JavaScript" ? "⚡" : s.name === "Git & Github" ? "🔗" : s.name === "VS Code" ? "📝" : s.name === "React" ? "⚛️" : s.name === "Tailwind CSS" ? "🎯" : s.name === "Node.js" ? "🟢" : s.name === "Vite" ? "⚙️" : "💻"}</span>
+        </div>
+        <div className="text-center">
+          <div className="text-green-300 text-sm font-mono font-bold">{s.name}</div>
+          <div className="text-green-700 text-xs">{s.category}</div>
+        </div>
       </div>
     ))}
   </div>
