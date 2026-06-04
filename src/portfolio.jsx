@@ -66,13 +66,13 @@ const CERTIFICATIONS = [
   { title: "Python 101 Fundamentals", issuer: "Cognitive Class.ai", date: "2026", id: "CERT-PY101-2026-002", image: python101 },
   { title: "Python for Beginners", issuer: "Simplilearn", date: "2026", id: "CERT-PYBEG-2026-003", image: pybeg },
   { title: "Introduction to Frontend Development", issuer: "Simplilearn", date: "2026", id: "CERT-FB-2026-004", image: introCert },
-  { title: "Professional Development Certificate", issuer: "Technical Training Institute", date: "2026", id: "CERT-PROF-2026-005", image: cert5 },
-  { title: "Advanced Web Development Certificate", issuer: "Digital Academy", date: "2026", id: "CERT-ADV-2026-006", image: cert6 },
+  { title: "Introduction to Machine Learning", issuer: "Simplilearn", date: "2026", id: "CERT-5-2026-005", image: cert5 },
+  { title: "Introduction to Computer Networking", issuer: "Simplilearn", date: "2026", id: "CERT-6-2026-006", image: cert6 },
 ];
 
 const AWARDS = [
-  { title: "Best Mobile App", issuer: "College Innovation Fair", date: "2023", id: "AWARD-BMA-2023-001", image: ricesureAward },
-  { title: "Certificate of Recognition", issuer: "Holy Cross of Davao College", date: "2024", id: "AWARD-COR-2024-002", image: certOfRecog },
+  { title: "Best Mobile App", issuer: "College Innovation Fair", date: "2026", id: "AWARD-BMA-2026-001", image: ricesureAward },
+  { title: "Certificate of Recognition", issuer: "Holy Cross of Davao College", date: "2026", id: "AWARD-COR-2026-002", image: certOfRecog },
 ];
 
 // ─── SHARED COMPONENTS ───────────────────────────────────────────────────────
