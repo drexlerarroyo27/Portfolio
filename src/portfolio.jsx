@@ -574,7 +574,7 @@ function PageAbout({ setPage }) {
       </div>
     </div>
 
-    {/* RIGHT SIDE */}
+    {/* RIGHT SIDED */}
     <div>
       <TerminalBox title="education.log" className="h-full !pt-3">
         <p className="text-green-600 text-xs mb-5">
