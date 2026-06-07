@@ -1211,16 +1211,16 @@ function BootScreen({ onDone }) {
 
   useEffect(() => {
     if (stepIdx >= steps.length) {
-      const t = setTimeout(onDone, 800);
+      const t = setTimeout(onDone, 100);
       return () => clearTimeout(t);
     }
     const target = steps[stepIdx].pct;
     if (pct < target) {
-      const t = setTimeout(() => setPct(p => p + 1), 14);
+      const t = setTimeout(() => setPct(p => p + 1), 2);
       return () => clearTimeout(t);
     } else {
       setLines(l => [...l, steps[stepIdx].label]);
-      const t = setTimeout(() => setStepIdx(i => i + 1), 220);
+      const t = setTimeout(() => setStepIdx(i => i + 1), 50);
       return () => clearTimeout(t);
     }
   }, [pct, stepIdx]);
@@ -1273,9 +1273,9 @@ function AccessGrantedScreen({ onDone }) {
   const [showText, setShowText] = useState(false);
 
   useEffect(() => {
-    const glitchTimer = setTimeout(() => setGlitching(false), 300);
-    const textTimer = setTimeout(() => setShowText(true), 400);
-    const doneTimer = setTimeout(onDone, 3200);
+    const glitchTimer = setTimeout(() => setGlitching(false), 100);
+    const textTimer = setTimeout(() => setShowText(true), 150);
+    const doneTimer = setTimeout(onDone, 800);
     return () => {
       clearTimeout(glitchTimer);
       clearTimeout(textTimer);
