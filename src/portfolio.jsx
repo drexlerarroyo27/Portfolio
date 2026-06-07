@@ -1208,7 +1208,7 @@ function BootScreen({ onDone }) {
     { pct: 80, label: "5. Starting Drexler.sys................ [OK]" },
     { pct: 100, label: "6. Access granted. Welcome, operator." },
   ];
-
+// commit
   useEffect(() => {
     if (stepIdx >= steps.length) {
       const t = setTimeout(onDone, 100);
